@@ -1,0 +1,34 @@
+managed implementation in class zbp_i_stud_00 unique;
+strict ( 2 );
+
+define behavior for ZI_STUD_00 //alias <alias_name>
+persistent table zstud_00
+lock master
+authorization master (  instance )
+//etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Id;
+
+
+  mapping for ZSTUD_00{
+
+Id = id;
+Firstname = firstname;
+Lastname  = lastname;
+Age = age;
+Course  = course;
+Courseduration = courseduration;
+Status = status;
+Gender = gender;
+Dob = dob;
+LocalCreatedBy = local_created_by;
+LocalCreatedAt = local_created_at;
+LocalLastChangedBy= local_last_changed_by;
+LastChangedAt = last_changed_at;
+LocalLastChangedAt = local_last_changed_at;
+
+}
+}
